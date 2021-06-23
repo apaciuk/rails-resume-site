@@ -1,74 +1,45 @@
-<!-- Navbar -->
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="#">Course Site</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
 
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-           <%= link_to "Home", root_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Latest</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">News</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Advertising</a>
-          </li>
-           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-          <% if user_signed_in? %>
-          <li class="nav-item">
-          <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "nav-link" %>
-          </li>
-          <% else %>
-          <li class="nav-item">
-             <%= link_to "Sign In", new_user_session_path, class: "nav-link" %>
-          </li>
-          <% end %>
-            <li class="nav-item">
-            <%= link_to "Sign Up", new_user_registration_path, class: "nav-link" %>
-          </li>
-        </ul>
-       <!-- Avatar -->
-      <a
-        class="dropdown-toggle d-flex align-items-center hidden-arrow"
-        href="#"
-        id="navbarDropdownMenuLink"
-        role="button"
-        data-mdb-toggle="dropdown"
-        aria-expanded="false"
-      >
-        <img
-          src="https://mdbootstrap.com/img/new/avatars/2.jpg"
-          class="rounded-circle"
-          height="25"
-          alt=""
-          loading="lazy"
-        />
-      </a>
-      <ul
-        class="dropdown-menu dropdown-menu-end"
-        aria-labelledby="navbarDropdownMenuLink"
-      >
-        <li>
-          <a class="dropdown-item" href="#">My profile</a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">Settings</a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">Logout</a>
-        </li>
-      </ul>
-    </div>
+<!-- ======= Navbar ======= -->
+  <div class="container">
+  <div class="collapse navbar-collapse custom-navmenu" id="main-navbar">
+    <div class="container py-2 py-md-5">
+      <div class="row align-items-start">
+        <div class="col-md-2">
+          <ul class="custom-menu">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="works.html">Works</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 d-none d-md-block  mr-auto">
+          <div class="tweet d-flex">
+            <span class="bi bi-twitter text-white mt-2 mr-3"></span>
+            <div>
+              <p><em>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis explicabo inventore. <br> <a href="#">t.co/v82jsk</a></em></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-none d-md-block">
+          <h3>Hire Me</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiisexplicabo inventore. <br> <a href="#">myemail@gmail.com</a></p>
+        </div>
       </div>
-    </nav>
- <main role="main">
+
+    </div>
+  </div>
+
+  <nav class="navbar navbar-light custom-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">MyPortfolio.</a>
+      <a href="#" class="burger" data-bs-toggle="collapse" data-bs-target="#main-navbar">
+        <span></span>
+      </a>
+    </div>
+  </nav>
+  </div>
+
+  <main id="main">
 
      
