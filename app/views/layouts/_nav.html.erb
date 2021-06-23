@@ -1,6 +1,6 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="#">Property Finder</a>
+      <a class="navbar-brand" href="#">Course Site</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -22,17 +22,17 @@
            <li class="nav-item">
             <a class="nav-link" href="#">Contact</a>
           </li>
-          <% if account_signed_in? %>
+          <% if user_signed_in? %>
           <li class="nav-item">
-          <%= link_to "Sign Out", destroy_account_session_path, method: :delete, class: "nav-link" %>
+          <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "nav-link" %>
           </li>
           <% else %>
           <li class="nav-item">
-             <%= link_to "Sign In", new_account_session_path, class: "nav-link" %>
+             <%= link_to "Sign In", new_user_session_path, class: "nav-link" %>
           </li>
           <% end %>
             <li class="nav-item">
-            <%= link_to "Sign Up", new_account_registration_path, class: "nav-link" %>
+            <%= link_to "Sign Up", new_user_registration_path, class: "nav-link" %>
           </li>
         </ul>
        <!-- Avatar -->
